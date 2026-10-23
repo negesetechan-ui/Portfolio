@@ -1,0 +1,748 @@
+
+/* =========================
+   GLOBAL SETTINGS
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: #0c0c0c;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    transition: color 0.3s ease,
+                background 0.3s ease,
+                transform 0.3s ease;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #0c0c0c;
+    border-bottom: 1px solid #EE6983;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.log-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image1 {
+    display: block;
+    flex-shrink: 0;
+}
+
+.image1 img {
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #EE6983;
+}
+
+/* Desktop navigation */
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.nav-header a,
+.mobile-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.nav-header a:hover,
+.mobile-menu a:hover {
+    color: #EE6983;
+}
+
+/* Hide mobile controls on desktop */
+
+.menu-toggle,
+.menu-icon,
+.mobile-menu {
+    display: none;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 65px 25px;
+}
+
+.hero-left {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-pill {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border: 1px solid rgba(238, 105, 131, 0.5);
+    border-radius: 30px;
+    background: rgba(238, 105, 131, 0.1);
+    color: #f5f5f5;
+    margin-bottom: 22px;
+}
+
+.hero-pill p {
+    font-size: 13px;
+}
+
+.status-dot {
+    color: #7ee787;
+    font-size: 12px;
+}
+
+.hero-title h1 {
+    font-size: clamp(30px, 4vw, 45px);
+    line-height: 1.25;
+    margin-bottom: 15px;
+    overflow-wrap: anywhere;
+}
+
+.hero-title h1 span,
+.hero-title h2 span {
+    color: #EE6983;
+}
+
+.hero-title h2 {
+    font-size: clamp(22px, 3vw, 30px);
+    line-height: 1.4;
+    margin-bottom: 18px;
+}
+
+.hero-description {
+    color: #c7c7c7;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-action {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.hero-action .action-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    border: 1px solid #EE6983;
+    border-radius: 12px;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hero-action .action-button:hover {
+    background: #EE6983;
+    color: #0c0c0c;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   HERO STATISTICS
+========================= */
+
+.hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.hero-meta-title {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.hero-meta strong {
+    display: block;
+    color: #EE6983;
+    font-size: 24px;
+}
+
+.hero-meta span {
+    color: #c7c7c7;
+    font-size: 12px;
+}
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.hero-right {
+    flex-shrink: 0;
+}
+
+.image-wrap {
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    background: linear-gradient(135deg, #EE6983, #8e44ad);
+    border-radius: 45% 45% 20px 20px;
+    overflow: hidden;
+}
+
+.image-wrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+/* =========================
+   HORIZONTAL SCROLLING SKILLS
+========================= */
+
+.horizontal-scroll {
+    width: 100%;
+    padding: 35px 0 40px;
+    background: #181014;
+    border-top: 1px solid #EE6983;
+    border-bottom: 1px solid #EE6983;
+    overflow: hidden;
+}
+
+.scroll-heading {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.scroll-heading span {
+    color: #EE6983;
+}
+
+/* Visible window for the animation */
+
+.scroll-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    /* Fade both edges */
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 5%,
+        #000 95%,
+        transparent
+    );
+
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 5%,
+        #000 95%,
+        transparent
+    );
+}
+
+/* Moving track: contains two equal groups */
+
+.content-scroll {
+    display: flex;
+    align-items: stretch;
+    width: max-content;
+    will-change: transform;
+    animation: scroll-left 26s linear infinite;
+}
+
+/* Both groups must have identical content and spacing */
+
+.scroll-group {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: stretch;
+    gap: 22px;
+    padding-right: 22px;
+}
+
+/* Individual skill cards */
+
+.skill-card {
+    flex: 0 0 175px;
+    min-height: 145px;
+    padding: 18px 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+
+    background: #0c0c0c;
+    border: 1px solid #EE6983;
+    border-radius: 14px;
+    color: #fff;
+
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+
+    transition: background 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease,
+                transform 0.3s ease;
+}
+
+.skill-card > i {
+    color: #EE6983;
+    font-size: 34px;
+    transition: color 0.3s ease;
+}
+
+.skill-card .stars {
+    color: gold;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+/* Card hover animation */
+
+.skill-card:hover {
+    background: #28151c;
+    border-color: #ff91a8;
+    box-shadow: 0 5px 22px rgba(238, 105, 131, 0.2);
+    transform: translateY(-5px);
+}
+
+.skill-card:hover > i {
+    color: #ffb3c2;
+}
+
+/* Move the entire track from right to left */
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause when hovering over the scrolling area */
+
+.scroll-wrapper:hover .content-scroll {
+    animation-play-state: paused;
+}
+
+/* Keyboard accessibility */
+
+.scroll-wrapper:focus-within .content-scroll {
+    animation-play-state: paused;
+}
+
+/* =========================
+   CONTENT SECTIONS
+========================= */
+
+.content-section {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 65px 25px;
+    scroll-margin-top: 80px;
+}
+
+.content-section h2 {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.content-section h2 span {
+    color: #EE6983;
+}
+
+.content-section p {
+    color: #c7c7c7;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.content-section a {
+    display: inline-block;
+    color: #EE6983;
+    text-decoration: none;
+}
+
+.content-section a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 25px 20px;
+    text-align: center;
+    border-top: 1px solid #303030;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* =========================
+   TABLET AND MOBILE MENU
+========================= */
+
+@media (max-width: 678px) {
+
+    .log-header {
+        flex-wrap: wrap;
+        padding: 13px 20px;
+        gap: 15px;
+    }
+
+    /* Hide desktop links */
+
+    .nav-header {
+        display: none;
+    }
+
+    /* Hidden but functional checkbox */
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    .menu-toggle:focus-visible + .menu-icon {
+        outline: 2px solid #EE6983;
+        outline-offset: 5px;
+    }
+
+    /* Mobile icons */
+
+    .menu-icon {
+        color: #fff;
+        font-size: 27px;
+        line-height: 1;
+        cursor: pointer;
+        margin-left: auto;
+        user-select: none;
+    }
+
+    .menu-bar {
+        display: block;
+    }
+
+    .x-mark {
+        display: none;
+    }
+
+    /* Mobile menu closed by default */
+
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+        padding: 10px 0;
+        background: #0c0c0c;
+        border-top: 1px solid #303030;
+    }
+
+    .mobile-menu a {
+        display: block;
+        width: 100%;
+        padding: 12px 5px;
+    }
+
+    /* Show X when the menu is open */
+
+    #menu-toggle:checked ~ .menu-bar {
+        display: none;
+    }
+
+    #menu-toggle:checked ~ .x-mark {
+        display: block;
+    }
+
+    #menu-toggle:checked ~ .mobile-menu {
+        display: flex;
+    }
+
+    /* Stack hero content */
+
+    .hero {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 30px;
+        padding: 35px 20px;
+    }
+
+    .hero-left {
+        width: 100%;
+    }
+
+    .hero-right {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .image-wrap {
+        width: 290px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .hero-title h1 {
+        font-size: 30px;
+    }
+
+    .hero-title h2 {
+        font-size: 23px;
+    }
+
+    /* Full-width hero buttons */
+
+    .hero-action {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .hero-action .action-button {
+        display: flex;
+        width: 100%;
+        min-height: 48px;
+        padding: 13px 16px;
+    }
+
+    .hero-meta {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .hero-meta-title {
+        min-width: 100px;
+    }
+
+    /* Smaller skills cards */
+
+    .scroll-heading {
+        font-size: 26px;
+    }
+
+    .content-scroll {
+        animation-duration: 22s;
+    }
+
+    .scroll-group {
+        gap: 15px;
+        padding-right: 15px;
+    }
+
+    .skill-card {
+        flex-basis: 150px;
+        min-height: 125px;
+    }
+
+    .content-section {
+        padding: 45px 20px;
+    }
+}
+
+/* =========================
+   EXTRA SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+
+    .hero-title h1 {
+        font-size: 26px;
+    }
+
+    .hero-title h2 {
+        font-size: 21px;
+    }
+
+    .hero-meta {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-pill {
+        max-width: 100%;
+    }
+
+    .hero-pill p {
+        font-size: 12px;
+    }
+
+    .scroll-heading {
+        font-size: 23px;
+    }
+
+    .content-scroll {
+        animation-duration: 18s;
+    }
+
+    .scroll-group {
+        gap: 12px;
+        padding-right: 12px;
+    }
+
+    .skill-card {
+        flex-basis: 125px;
+        min-height: 115px;
+        padding: 14px 8px;
+        font-size: 14px;
+        
+    }
+
+    .skill-card > i {
+        font-size: 28px;
+    }
+
+    .skill-card .stars {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+}
+
+
+.scroll-group {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: stretch;
+    gap: 22px;
+    padding-right: 22px;
+}
+.scroll-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.content-scroll {
+    display: flex;
+    align-items: stretch;
+    width: max-content;
+    will-change: transform;
+
+    /* Straight, smooth, infinite animation */
+    animation: scroll-left 25s linear infinite;
+}
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause when the user hovers over the skills */
+
+.scroll-wrapper:hover .content-scroll {
+    animation-play-state: paused;
+}
+
+/* Pause for keyboard interaction */
+
+.scroll-wrapper:focus-within .content-scroll {
+    animation-play-state: paused;
+}
+/* =========================
+   REDUCED MOTION ACCESSIBILITY
+========================= */
+
+@media (max-width:678px) {
+
+    html {
+        scroll-behavior: auto;
+    }
+  .content-scroll {
+        animation-duration: 22s;
+    }
+   
+    .scroll-group {
+        gap: 15px;
+        padding-right: 15px;
+    }
+
+   
+
+   
+    
+}
