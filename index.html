@@ -95,6 +95,7 @@
                 </a>
 
 
+
 <a href="photo_2026-10-06_14-03-55.jpg"
    target="_blank"
    rel="noopener noreferrer"
@@ -108,11 +109,23 @@
       font-weight: bold;
       cursor: pointer;
       transition: all 0.3s ease;
+      border: 2px solid #EE6983;
    "
-   onmouseover="this.style.background='#ff8fa3'; this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(238,105,131,0.4)'"
-   onmouseout="this.style.background='#EE6983'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+   onmouseover="
+      this.style.background = '#ff8fa3';
+      this.style.transform = 'translateY(-5px)';
+      this.style.boxShadow = '0 8px 20px rgba(238,105,131,0.4)';
+   "
+   onmouseout="
+      this.style.background = '#EE6983';
+      this.style.transform = 'translateY(0)';
+      this.style.boxShadow = 'none';
+   "
+   onmousedown="this.style.transform='scale(0.95)'"
+   onmouseup="this.style.transform='translateY(-5px)'">
    Get My CV
 </a>
+
 
 
             </div>
